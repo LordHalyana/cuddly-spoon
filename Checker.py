@@ -10,11 +10,14 @@ localtime = time.asctime(time.localtime(time.time()))
 whitelist = []
 blacklist = []
 
+
+#Opens blacklist.json and puts data into blacklist
 with open('Settings/blacklist.json') as json_file:
     data = json.load(json_file)
     for p in data:
         blacklist.append(p)
 
+#Opens whitelist.json and puts data into Whitelist
 with open('Settings/whitelist.json') as json_file:
     data = json.load(json_file)
     for p in data:
