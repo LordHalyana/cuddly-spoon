@@ -5,16 +5,16 @@ Prints PID and Process names that are not in whitelist
 
 Kills Processes in Blacklist
 
+Runs until you stop it.
+
 
 
 ######    To DO   #####
 
-*make it run in intervals so you dont need to manualy run the script.
+*make whitelist and blacklist into json files
 
+*read from said json files
 
+*make GUI for easy way of adding and removing process to blacklist or whitelist.
 
-
-
-######    Down the Line   #####
-
-GUI and Easy way of adding applications to and from both whitelist and blacklist
+*make it so you can start or stop the script from running from said GUI
