@@ -5,7 +5,7 @@ Prints PID and Process names that are not in whitelist
 
 Kills Processes in Blacklist
 
-Runs until you stop it.
+Runs every 60sec until you stop it.
 
 
 
