@@ -2,6 +2,12 @@ import wmi
 import time
 import json
  
+# The script should  read from /Settings .json files to fill in the whitelist and blacklist
+# and run ever 60 sec. <- should be changed when GUI is ready to be in a /Settings.json file with other information that should be kept between sessions.
+# GUI should have buttons to easy put process into Blacklist or Whitelist.
+# maybe a counter/grap about wich processes have been killed, how many times etc. and the times it got killed.
+
+
 # Initializing the wmi constructor
 f = wmi.WMI()
 
@@ -31,8 +37,10 @@ with open('Settings/blacklist.json', 'w') as outfile:
 with open('Settings/whitelist.json', 'w') as outfile:
     json.dump(whitelist, outfile)
 
+# class to repetedly check and Terminate unwanted Processes
 def process_killer():
 
+    # Pause function to wait for 60sec.  60sec should be a variable changeable in the GUI when rdy
     def next_scan():
         print('Next Scan in 60 sec')
         time.sleep(60)
@@ -41,6 +49,7 @@ def process_killer():
 
     def check_processes():
 
+        # Checks what processes are running and printing all Processes that are not in whitelist to the Terminal with Time, PID, Process Name and Path
         print('Checking Processes')
 
         # Printing the header for the later columns
@@ -64,6 +73,7 @@ def process_killer():
 
         next_scan()
 
+    # inisiates the loop
     check_processes()
 
 process_killer()
