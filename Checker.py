@@ -10,22 +10,22 @@ localtime = time.asctime(time.localtime(time.time()))
 whitelist = []
 blacklist = []
 
-with open('blacklist.json') as json_file:
+with open('Settings/blacklist.json') as json_file:
     data = json.load(json_file)
     for p in data:
         blacklist.append(p)
 
-with open('whitelist.json') as json_file:
+with open('Settings/whitelist.json') as json_file:
     data = json.load(json_file)
     for p in data:
         whitelist.append(p)
 
 #Saves blacklist to json
-with open('blacklist.json', 'w') as outfile:
+with open('Settings/blacklist.json', 'w') as outfile:
     json.dump(blacklist, outfile)
 
 #Saves whitelist to json
-with open('whitelist.json', 'w') as outfile:
+with open('Settings/whitelist.json', 'w') as outfile:
     json.dump(whitelist, outfile)
 
 def process_killer():

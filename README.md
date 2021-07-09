@@ -7,7 +7,7 @@ Kills Processes in Blacklist
 
 Runs every 60sec until you stop it.
 
-Edit whitelist and blacklist .json files to add files to blacklist and whitelist
+Edit whitelist and blacklist .json files in settings folder to add files to blacklist and whitelist
 
 
 
